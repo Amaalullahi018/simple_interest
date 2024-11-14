@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+     h2{
+        color: whitesmoke;
+     }
+     center{
+        margin-top: 250px;
+     }
+     input{
+        padding: 15px 20px;
+     }
+     label{
+        color: whitesmoke;
+        font-size: x-large;
+     }
+      /* #prin{
+        color: whitesmoke;
+     }
+     #rate{
+       color: whitesmoke;
+     }
+     #time{
+       color: whitesmoke;
+     }  */
+
+     button{
+        margin-bottom: 10px;
+        background-color: navy;
+        padding: 10px;
+        font-size: 15px;
+        border-radius: 20px;
+        border: none;
+        color: whitesmoke;
+     }
+     form{
+        color: whitesmoke;
+        font-size: x-large;
+     }
+     input{
+        padding: 10px 15px;
+     }
+     #result{
+        color: white;
+     }
+
+    </style>
+    <title>Calculator</title>
+</head>
+<body style="background-image: url(1.jpeg);background-repeat: no-repeat;background-size: cover;background-attachment: fixed;">
+    <center>
+        
+            <h2><i>Simple Interest CALCULATOR</i></h2>
+            <label for="weight" class="form-label">Principle:</label>
+            <input type="number" id="prin" placeholder="e.g 123"><br><br>
+            <label for="height" class="form-label">Rate:</label>
+            <input type="number" id="rate" placeholder="e.g 123"><br><br>
+            <label for="height" class="form-label">Time:</label>
+            <input type="number" id="time" placeholder="e.g 123">
+            <p id="result"></p>
+            <button id="btn" onclick="interest()"><b>Calculate</b></button>
+       
+    </center>
+
+    <!-- <form action="">
+        <fieldset>
+            <legend style="color: whitesmoke; font-size:x-large;">Simple Interest Calculator</legend>
+           Principal:<br><input type="number" id="prin" placeholder="Principle"><br><br>
+           Rate:<br><input type="number" id="rate" placeholder="Rate"><br><br>
+           Time:<br><input type="number" id="time" placeholder="Time">
+            <p id="result"></p>
+          <button id="btn" onclick="interest()"><b>Calculate</b></button> 
+        </fieldset>
+    </form> -->
+</body>
+<script>
+  function interest()
+      {
+        var P=document.getElementById("prin").value;
+        var R=document.getElementById("rate").value;
+        var T=document.getElementById("time").value;
+        var interest=(P * R * T) / 100;
+        document.getElementById("result").innerHTML="your result is" + " " + interest;
+
+      }
+</script>
+</html>
